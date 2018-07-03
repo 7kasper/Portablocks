@@ -1,0 +1,29 @@
+name: PortaBlocks
+main: dev7kasper.portablocks.PortaBlocks
+author: 7kasper
+version: 1
+
+permissions:
+  portablocks.*:
+    description: Gives access to all portablocks stuff.
+    children:
+      portablocks.use.*: true
+  portablocks.use.*:
+    description: Allows you to use all portablocks.
+    children:
+      portablocks.use.workbench: true
+      portablocks.use.enchantment_table: true
+      portablocks.use.ender_chest: true
+      portablocks.use.shulker_box: true
+  portablocks.use.workbench:
+    description: Allows you to use the workbench portablock.
+    default: true
+  portablocks.use.enchantment_table:
+    description: Allows you to use the enchantment_table portablock.
+    default: true
+  portablocks.use.ender_chest:
+    description: Allows you to use the ender_chest portablock.
+    default: true
+  portablocks.use.shulker_box:
+    description: Allows you to use the shulker_box portablock.
+    default: true
