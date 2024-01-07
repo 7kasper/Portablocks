@@ -28,14 +28,14 @@ public class PortaBlocks extends JavaPlugin implements Listener {
 
 	public boolean clickWithBlock(Player player, ItemStack container) {
 		switch(container.getType()) {
-			case WORKBENCH: {
+			case CRAFTING_TABLE: {
 				if (player.hasPermission("portablocks.use.workbench")) {
 					player.openWorkbench(null, true);
 					return true;
 				}
 				break;
 			}
-			case ENCHANTMENT_TABLE: {
+			case ENCHANTING_TABLE: {
 				if (player.hasPermission("portablocks.use.enchantment_table")) {
 					player.openEnchanting(null, true);
 					return true;
@@ -49,7 +49,7 @@ public class PortaBlocks extends JavaPlugin implements Listener {
 				}
 				break;
 			}
-			/*case WHITE_SHULKER_BOX:
+			case WHITE_SHULKER_BOX:
 			case ORANGE_SHULKER_BOX:
 			case MAGENTA_SHULKER_BOX:
 			case LIGHT_BLUE_SHULKER_BOX:
@@ -79,7 +79,7 @@ public class PortaBlocks extends JavaPlugin implements Listener {
 					}
 				}
 				break;
-			}*/
+			}
 			default: {
 				break;
 			}
