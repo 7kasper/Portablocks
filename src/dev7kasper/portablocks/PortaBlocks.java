@@ -144,7 +144,6 @@ public class PortaBlocks extends JavaPlugin implements Listener {
 			// If we are holding it on cursor we need to store this so we can see what happens later.
 			if (isPickupAction(e.getAction())) {
 				portaShulkerOnCursor.add(e.getWhoClicked().getUniqueId());
-				Bukkit.broadcastMessage("SOC");
 				return;
 			} else if (e.getAction() == InventoryAction.DROP_ONE_SLOT || e.getAction() == InventoryAction.DROP_ALL_SLOT) {
 				//simulate item drop, this is buggy
@@ -165,7 +164,6 @@ public class PortaBlocks extends JavaPlugin implements Listener {
 				e.getWhoClicked().closeInventory();
 				return;
 			} else if (isPlaceAction(e.getAction())) {
-				Bukkit.broadcastMessage("Top: " + e.getRawSlot());
 				newItemSlot = e.getRawSlot();
 				portaShulkerOnCursor.remove(e.getWhoClicked().getUniqueId());
 			}
@@ -192,7 +190,6 @@ public class PortaBlocks extends JavaPlugin implements Listener {
 		if (e.getAction() == InventoryAction.MOVE_TO_OTHER_INVENTORY
 				&& e.getCurrentItem() != null
 				&& isShulkerBox(e.getCurrentItem().getType())) {
-			Bukkit.broadcastMessage("rrrrr: " + e.getRawSlot());
 			// Check if shulker box will be moved from hotbar to inventory
 			if (e.getRawSlot() > 53 && e.getRawSlot() < 63) {
 				// Move shulker box instead to next free inventory slot
