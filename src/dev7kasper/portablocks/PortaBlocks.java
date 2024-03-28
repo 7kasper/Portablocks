@@ -74,6 +74,7 @@ public class PortaBlocks extends JavaPlugin implements Listener {
 				}
 				break;
 			}
+			case SHULKER_BOX:
 			case LIGHT_GRAY_SHULKER_BOX:
 			case BLACK_SHULKER_BOX:
 			case BLUE_SHULKER_BOX:
@@ -263,6 +264,7 @@ public class PortaBlocks extends JavaPlugin implements Listener {
 
 	private boolean isShulkerBox(Material m) {
 		switch (m) {
+			case SHULKER_BOX:
 			case LIGHT_GRAY_SHULKER_BOX:
 			case BLACK_SHULKER_BOX:
 			case BLUE_SHULKER_BOX:
