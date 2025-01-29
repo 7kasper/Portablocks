@@ -147,7 +147,7 @@ public class PortaBlocks extends JavaPlugin implements Listener {
 				portaShulkerOnCursor.add(e.getWhoClicked().getUniqueId());
 				return;
 			} else if (e.getAction() == InventoryAction.DROP_ONE_SLOT || e.getAction() == InventoryAction.DROP_ALL_SLOT) {
-				//simulate item drop, this is buggy
+				//simulate item drop, this is buggy -> Item dupes
 				dropItem(e.getCurrentItem(), e.getWhoClicked());
 				e.setCurrentItem(null);
 				e.getWhoClicked().closeInventory();
